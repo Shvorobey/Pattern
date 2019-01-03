@@ -6,21 +6,21 @@
  * Time: 23:14
  */
 
-function htmlToBBCode($html)
-{
-    $search = ['<b>', '</b>', '<i>', '</i>', '<u>', '</u>'];
-    $replace = ['[b]', '[/b]', '[i]', '[/i]', '[u]', '[/u]'];
+//function htmlToBBCode($html)
+//{
+//    $search = ['<b>', '</b>', '<i>', '</i>', '<u>', '</u>'];
+//    $replace = ['[b]', '[/b]', '[i]', '[/i]', '[u]', '[/u]'];
+//
+//    return str_replace($search, $replace, $html);
+//}
 
-    return str_replace($search, $replace, $html);
-}
-
-function htmlToMarkdown($html)
-{
-    $search = ['<b>', '</b>', '<i>', '</i>', '<u>', '</u>'];
-    $replace = ['**', '**', '__', '__', '+', '+'];
-
-    return str_replace($search, $replace, $html);
-}
+//function htmlToMarkdown($html)
+//{
+//    $search = ['<b>', '</b>', '<i>', '</i>', '<u>', '</u>'];
+//    $replace = ['**', '**', '__', '__', '+', '+'];
+//
+//    return str_replace($search, $replace, $html);
+//}
 
 $html = '<b>Полужирный</b>. <i>Курсив</i>.';
 
