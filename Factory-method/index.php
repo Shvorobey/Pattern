@@ -11,6 +11,8 @@ require_once 'ConverterFactoryInterface.php';
 require_once 'HtmlConverterFactory.php';
 require_once 'HtmlToBBCodeConverter.php';
 require_once 'HtmlToMarkdownConverter.php';
+require_once 'TextileConverterFactory.php';
+require_once 'TextileToMarkdownConverter.php';
 
 
 //function htmlToBBCode($html)
@@ -40,3 +42,7 @@ echo $converter->convert($html) . '</br></br>';
 $converter = HtmlConverterFactory::get(HtmlConverterFactory::TYPE_MARKDOWN);
 echo $converter->convert($html) . '</br></br>';
 
+$html = '**Полужирный**. __Курсив__.';
+
+$converter = TextileConverterFactory::get(TextileConverterFactory::TYPE_MARKDOWN);
+echo $converter->convert($html) . '</br></br>';
