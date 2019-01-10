@@ -6,7 +6,7 @@
  * Time: 23:03
  */
 
-class QiwiPaymentAdapter
+class QiwiPaymentAdapter implements PaymentInterface
 {
     protected $paymentGateway;
 

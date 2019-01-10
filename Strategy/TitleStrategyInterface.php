@@ -6,6 +6,7 @@
  * Time: 00:07
  */
 
+
 interface TitleStrategyInterface
 {
     public function modifyTitle($title);
