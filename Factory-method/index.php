@@ -6,6 +6,13 @@
  * Time: 23:14
  */
 
+require_once 'Converter.php';
+require_once 'ConverterFactoryInterface.php';
+require_once 'HtmlConverterFactory.php';
+require_once 'HtmlToBBCodeConverter.php';
+require_once 'HtmlToMarkdownConverter.php';
+
+
 //function htmlToBBCode($html)
 //{
 //    $search = ['<b>', '</b>', '<i>', '</i>', '<u>', '</u>'];
@@ -24,5 +31,12 @@
 
 $html = '<b>Полужирный</b>. <i>Курсив</i>.';
 
-echo htmlToBBCode($html) . '</br></br>';
-echo htmlToMarkdown($html) . '</br></br>';
+//echo htmlToBBCode($html) . '</br></br>';
+//echo htmlToMarkdown($html) . '</br></br>';
+
+$converter = HtmlConverterFactory::get(HtmlConverterFactory::TYPE_BBCODE);
+echo $converter->convert($html) . '</br></br>';
+
+$converter = HtmlConverterFactory::get(HtmlConverterFactory::TYPE_MARKDOWN);
+echo $converter->convert($html) . '</br></br>';
+
